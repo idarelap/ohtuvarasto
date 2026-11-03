@@ -87,7 +87,10 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(varasto.tilavuus, 10)
 
     def test_alkusaldo_oikein(self):
-        raise AssertionError("Hajotetaan testit tahallaan")
+        varasto = Varasto(10, 5)
+
+        self.assertAlmostEqual(varasto.saldo, 5)
+        self.assertAlmostEqual(varasto.tilavuus, 10)
 
     def test_str_metodi(self):
         varasto = Varasto(10, 5)
